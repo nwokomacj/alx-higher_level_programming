@@ -2,6 +2,7 @@
 
 """Defines a rectangle"""
 
+
 class Rectangle:
     """Represents a rectangle"""
 
@@ -19,7 +20,7 @@ class Rectangle:
     def width(self):
         """Get or set the current width of the rectangle"""
         return (self.__width)
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -50,10 +51,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return (2 * (self.__width + self.__height))
-
-
-
-
-
-
-
