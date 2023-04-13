@@ -10,13 +10,15 @@ def matrix_divided(matrix, div):
     Returns:
         A new matrix which is the result of the division
     Raises:
-        TypeError: When the matrix is not a list of lists of integers or floats.
+        TypeError: When the matrix is not a list of lists of integers or floats
         TypeError: When each row is not of equall size
         TypeError: When div is neither integer or float
         ZeroDivisionError: When div is equall to zero
     """
-    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if (not isinstance(matrix, list) or not all(isinstance(row, list)
+                                                for row in matrix)):
+        raise TypeError("matrix must be a matrix (list of lists) "
+                        "of integers/floats")
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
@@ -32,7 +34,7 @@ def matrix_divided(matrix, div):
     new_matrix = []
 
     for row in matrix:
-        new_row =[round(x / div, 2) for x in row]
+        new_row = [round(x / div, 2) for x in row]
         new_matrix.append(new_row)
 
     return(new_matrix)
