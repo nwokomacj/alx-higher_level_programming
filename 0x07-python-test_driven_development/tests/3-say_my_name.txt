@@ -1,0 +1,81 @@
+3-say_my_name.py
+===============
+
+This file tests a function that prints a fullname ''def say_my_name(first_name, last_name="")''.
+
+Usage
+====
+''def say_my_name(first_name, last_name="")'' prints the fullname
+''first_name'' is the first name and ''last_name'' is the last name.
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+	>>> say_my_name("John", "Smith")
+	John Smith
+	>>> say_my_name("Walter", "White")
+	Walter Wite
+	>>> say_my_name("Bob")
+	Bob
+	>>> try:
+    	...	say_my_name(12, "White")
+	... except Exception as e:
+    	...	print(e)
+
+Invalid Input
+============
+
+''first_name'' must be string. Otherwise a TypeError is raised.
+
+::
+
+	>>> try:
+    	...	say_my_name(12, "White")
+	... except Exception as e:
+    	...	print(e)
+	first_name must be a string
+
+
+::
+
+	>>> try:
+    	...	say_my_name(-5, "Smith")
+	... except Exception as e:
+    	...	print(e)
+	first_name must be a string
+
+
+::
+
+	>>> try:
+    	...	say_my_name(2.8, "Smith")
+	... except Exception as e:
+	...	print(e)
+	first_name must be a string
+
+
+''last_name'' must be string. Otherwise a TypeError is raised.
+	
+::
+
+	>>> try:
+	...     say_my_name("Bob", 5)
+	... except Exception as e:
+	...     print(e)
+	last_name must be a string
+::
+
+	>>> try:
+	...     say_my_name("Bob", 2.8)
+	... except Exception as e:
+	...     print(e)
+	last_name must be a string
+::
+
+	>>> try:
+	...     say_my_name("Bob", -7)
+	... except Exception as e:
+	...     print(e)
+	last_name must be a string
+
