@@ -1,0 +1,49 @@
+HOW TO USE 5-text_indentation.py
+
+This module defines a text-indentation function ``text_indentation(text)``
+
+USAGE
+
+Prints text with two new characters after: ``.``, ``?``, ``:``.
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Hello.")
+    Hello.
+    <BLANKLINE>
+
+No space is printed at the beginning of a line
+
+    >>> text_indentation("  Hello amaka.")
+    Hello amaka.
+    <BLANKLINE>
+
+No space is printed at the end of a line
+
+    >>> text_indentation("Hello?  ")
+    Hello?
+    <BLANKLINE>
+
+    >>> text_indentation("   Nice one.   This is great:   ")
+    Nice one.
+    <BLANKLINE>
+    This is great:
+    <BLANKLINE>
+
+New lines not ending without the characters ``.``, ``:``, ``?`` are not ended
+with new lines
+
+    >>> text_indentation("No ending period, so no new line")
+    No ending period, so no new line
+
+    >>> text_indentation("Lets's check out a new line tab: \nFrom here.")
+    Let's check out a new line tab:
+    <BLANKLINE>
+    <BLANKLINE>
+    From here.
+    <BLANKLINE>
+
+INVALID INPUT
+
+    >>> text_indentation(7)
+    Traceback (most recent call last):
+    TypeError: text must be a string
