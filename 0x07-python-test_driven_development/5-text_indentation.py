@@ -24,3 +24,4 @@ def text_indentation(text):
             i += 1
     outcome = outcome.strip()
     print(outcome)
+    print("")
