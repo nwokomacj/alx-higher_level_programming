@@ -2,7 +2,7 @@
 """Contains the Mylist class"""
 
 
-class Mylist(list):
+class MyList(list):
     """a subclass of list"""
     def __init__(self):
         """Initializes the object"""
