@@ -2,9 +2,12 @@
 """Defines a base geometry class BaseGeometry"""
 
 
-def area(self):
-    """not implemented"""
-    raise Exception("area() is not implemented")
+class BaseGeometry:
+    """Represents Basegeometry"""
+
+    def area(self):
+        """not implemented"""
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """Validates a parameter as an integer
